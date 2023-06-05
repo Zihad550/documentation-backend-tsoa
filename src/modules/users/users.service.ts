@@ -1,6 +1,5 @@
 import IUser from './users.interface';
 
-// A post request should not contain an id.
 export type UserCreationParams = Pick<IUser, 'email' | 'name' | 'phoneNumbers'>;
 
 export class UsersService {

@@ -1,4 +1,3 @@
-// src/users/usersController.ts
 import {
   Body,
   Controller,
@@ -22,12 +21,12 @@ export class UsersController extends Controller {
     return new UsersService().get(userId, name);
   }
 
-  @SuccessResponse('201', 'Created') // Custom success response
+  @SuccessResponse('201', 'Created')
   @Post()
   public async createUser(
     @Body() requestBody: UserCreationParams
   ): Promise<void> {
-    this.setStatus(201); // set return status 201
+    this.setStatus(201);
     new UsersService().create(requestBody);
     return;
   }
