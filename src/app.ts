@@ -1,4 +1,3 @@
-// src/app.ts
 import express, {
   Request as ExRequest,
   Response as ExResponse,
